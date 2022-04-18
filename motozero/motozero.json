@@ -1,0 +1,34 @@
+{
+    "name": "motozero",
+    "info": "Raspberry Pi GPIO motor controller add-on board for up to 4 motors",
+    "callback": "read",
+    "ros_message": "sensor_msgs.msg.Imu",
+    "dependencies": [
+        {
+            "type": "pip3",
+            "package":"gpiozero"           
+        }
+    ]
+}
+
+{
+    
+    "name": "picam",
+    "info": "V4L2-based publisher for raspberry pi camera",
+    "callback": "read",
+    "ros_message": ["sensor_msgs.msg", "Image"],
+    "dependencies": []
+}
+
+{
+    "name": "motorhead",
+    "info": "I2C/Serial Motor Driver",
+    "dependencies": [
+        {
+            "type": "pip3",
+            "package":"smbus2"            
+        }
+    ],
+    "callback": "update",
+    "ros_message": ["geometry_msgs.msg", "Twist"]
+}
