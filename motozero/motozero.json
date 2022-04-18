@@ -1,0 +1,12 @@
+{
+    "name": "motozero",
+    "info": "Raspberry Pi GPIO motor controller add-on board for up to 4 motors",
+    "callback": ["circle, forward, backward, right, left, stop, update"],
+    "ros_message": ["geometry_msgs.msg", "Twist"],
+    "dependencies": [
+        {
+            "type": "pip3",
+            "package":"gpiozero"           
+        }
+    ]
+}
