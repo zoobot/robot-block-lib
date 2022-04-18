@@ -24,25 +24,11 @@ STOP = 0 # Stop
 # MOTOR4B = 13
 # MOTOR4_ENABLE = 18
 
-def main(self, pins):
-    self.circle();
-    print('go robot go')
-
-if __name__ == '__main__':
-    try:
-        main()
-    except KeyboardInterrupt:
-        pass
-    finally:
-        GPIO.cleanup()
-
-
-
-
 class motozero():
      
     def __init__(self, pins):
-        self.init_pins(pins)
+        self.init_pins(self, pins)
+        self.update(self)
 
         '''
              try:
@@ -113,3 +99,7 @@ class motozero():
     def disconnect(self):
         GPIO.cleanup()
         print('disconnect: ', self.motor1.value, self.motor2.value, self.motor3.value, self.motor4.value)
+
+    def update(self):
+        self.circle(self)
+        print('update circle it: ', self)
