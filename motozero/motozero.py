@@ -27,7 +27,7 @@ STOP = 0 # Stop
 class motozero():
      
     def __init__(self, pins):
-        self.init_pins(self, pins)
+        self.init_pins(pins)
         self.update(self)
 
         '''
