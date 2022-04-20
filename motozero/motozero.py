@@ -1,6 +1,6 @@
 import rospy, smbus2, logging,time 
 from core.utils import *
-import RPi.GPIO as GPIO
+# import RPi.GPIO as GPIO
 from gpiozero import Motor, OutputDevice
 from time import sleep
 
@@ -95,9 +95,9 @@ class motozero():
         self.motor4.stop()
         print('stop: ', self.motor1.value, self.motor2.value, self.motor3.value, self.motor4.value)
 
-    def disconnect(self):
-        GPIO.cleanup()
-        print('disconnect: ', self.motor1.value, self.motor2.value, self.motor3.value, self.motor4.value)
+    # def disconnect(self):
+    #     GPIO.cleanup()
+    #     print('disconnect: ', self.motor1.value, self.motor2.value, self.motor3.value, self.motor4.value)
 
     def update(self, msg):
         # self.circle(self)
