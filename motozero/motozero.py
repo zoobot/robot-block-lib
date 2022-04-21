@@ -100,7 +100,10 @@ class motozero():
     #     print('disconnect: ', self.motor1.value, self.motor2.value, self.motor3.value, self.motor4.value)
 
     def update(self, msg):
+        print('update self, msg', self, msg)
+        print('update circle')
         self.circle(self)
+        print('update sleep')
         sleep(3)
+        print('update stop')
         self.stop(self)
-        print('update circle sleep stop', self, msg)
